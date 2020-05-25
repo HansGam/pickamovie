@@ -1,0 +1,23 @@
+
+$background-color: #242424;
+$primary-text-color: #fff;
+$banner-color: #444444;
+
+.Header {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: $banner-color;
+
+  .navlink {
+    margin-right: 1px;
+    color: $primary-text-color;
+    padding: 0 1em 0 .5em;
+  }
+
+  .navlink:hover {
+    background-color: #505050;
+    text-decoration: underline;
+  }
+}
