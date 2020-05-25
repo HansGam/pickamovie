@@ -1,0 +1,18 @@
+#!/usr/bin/env python3
+import subprocess
+import shutil
+
+output = subprocess.check_output(['git', 'status', '-s'])
+
+if len(output) > 0:
+    print("Error: There are uncommitted changes. Exiting...")
+    exit(1)
+
+#Test and build locally
+npm = shutil.which('npm')
+subprocess.check_call([npm, 'test'])
+subprocess.check_call([npm, 'run', 'test:build'])
+subprocess.check_call([npm, 'run', 'build'])
+
+#If calls are successful, push
+subprocess.check_call(['git', 'push'])
