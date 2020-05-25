@@ -9,14 +9,12 @@ function App() {
         <Router>
             <Header/>
             <Switch>
-                <div className="App">
-                    <Route exact path="/" >
-                        <Page title="Home" />
-                    </Route>
-                    <Route exact path="/about">
-                        <Page title="About" />
-                    </Route>
-                </div>
+                <Route exact path="/">
+                    <Page title="Home"/>
+                </Route>
+                <Route exact path="/about">
+                    <Page title="About"/>
+                </Route>
             </Switch>
         </Router>
     )
