@@ -5,7 +5,7 @@ import {Card} from "../Card/Card";
 import Button from "../Button/Button";
 
 interface Props {
-    title: string;
+    title?: string;
 }
 
 const genreOptions = [
