@@ -2,7 +2,8 @@ import React from 'react';
 import './App.css';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import {Header} from "./Header/Header";
-import Page from "./Page/Page";
+import About from "./About/About";
+import Home from "./Home/Home";
 
 function App() {
     return (
@@ -10,10 +11,10 @@ function App() {
             <Header/>
             <Switch>
                 <Route exact path="/">
-                    <Page title="Home"/>
+                    <Home title="Home"/>
                 </Route>
                 <Route exact path="/about">
-                    <Page title="About"/>
+                    <About title="About"/>
                 </Route>
             </Switch>
         </Router>
